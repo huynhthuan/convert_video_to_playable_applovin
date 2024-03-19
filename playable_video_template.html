@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                width: 100%;
+                height: 100%;
+                background-color: #000;
+            }
+
+            video {
+                height: 100%;
+                width: 100%;
+                margin: 0 auto;
+                object-fit: contain;
+            }
+
+            /* Extra small devices (phones, 600px and down) */
+            @media only screen and (max-width: 600px) {
+                #video_landscape {
+                    display: none;
+                }
+                #video_portrait {
+                    display: block;
+                }
+            }
+            /* Small devices (portrait tablets and large phones, 600px and up) */
+            @media only screen and (min-width: 600px) {
+                #video_landscape {
+                    display: block;
+                }
+                #video_portrait {
+                    display: none;
+                }
+            }
+            /* Medium devices (landscape tablets, 768px and up) */
+            @media only screen and (min-width: 768px) {
+                #video_landscape {
+                    display: block;
+                }
+                #video_portrait {
+                    display: none;
+                }
+            }
+            /* Large devices (laptops/desktops, 992px and up) */
+            @media only screen and (min-width: 992px) {
+                #video_landscape {
+                    display: block;
+                }
+                #video_portrait {
+                    display: none;
+                }
+            }
+            /* Extra large devices (large laptops and desktops, 1200px and up) */
+            @media only screen and (min-width: 1200px) {
+                #video_landscape {
+                    display: block;
+                }
+                #video_portrait {
+                    display: none;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <video autoplay loop muted onclick="" id="video_landscape" playsinline>
+            <source type="video/mp4" />
+        </video>
+        <video autoplay loop muted onclick="" id="video_portrait" playsinline>
+            <source type="video/mp4" />
+        </video>
+
+        <script>
+            let base64_video_landscape = '@@base_64_video_landscape@@';
+            let base64_video_portrait = '@@base_64_video_portrait@@';
+
+            let _eVideoLandscape = document.querySelector('#video_landscape');
+            let _eVideoPortrait = document.querySelector('#video_portrait');
+
+            _eVideoLandscape.src = base64_video_landscape;
+            _eVideoPortrait.src = base64_video_portrait;
+
+            _eVideoLandscape.addEventListener('click', clickthrough);
+            _eVideoPortrait.addEventListener('click', clickthrough);
+
+            function clickthrough(event) {
+                event.preventDefault();
+                mraid.open('');
+            }
+        </script>
+    </body>
+</html>
