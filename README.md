@@ -11,7 +11,7 @@ Clone project
 # Step 3
 
 - Open terminal at **root project**
-- Run cmd ```npm install```
+- If first clone project => Run cmd ```npm install```
 - Run cmd ```node .\index.js```
 
 # Step 4
