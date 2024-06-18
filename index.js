@@ -1,7 +1,7 @@
 const fs = require('fs');
 //============================================
-const videoLandcsapePath = './Video/sample_rikko_landscape.mp4';
-const videoPortraitPath = './Video/sample_rikko_portrait.mp4';
+const videoLandcsapePath = './Video/v2.mp4';
+const videoPortraitPath = './Video/v1.mp4';
 //============================================
 const videoLandscape = fs.readFileSync(videoLandcsapePath);
 const videoPortrait = fs.readFileSync(videoPortraitPath);
